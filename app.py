@@ -43,7 +43,7 @@ def search(anime_name):
 
 @app.route('/about')
 def about():
-    return '<p>A Project that scrapes anime and is coded in python</p>'
+    return '<p>A Project that scrapes anime and is coded in python :3</p>'
 
 
 @app.route('/contact')
@@ -58,4 +58,4 @@ def animelist():
 
 if __name__ == "__main__":
 
-    app.run(host="0.0.0.0",port=8080,debug=True)
+    app.run(host="0.0.0.0",port=80,debug=True)

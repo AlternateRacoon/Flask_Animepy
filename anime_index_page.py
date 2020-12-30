@@ -14,11 +14,11 @@ def anime_index():
         conn = sqlite3.connect("anime_database.db")
         c = conn.cursor()
         c.execute("SELECT * FROM latest WHERE name='" + show_names[row] + "'")
-        if c.fetchone():
-            shows_latest.append(c.fetchone())
-
-        else:
+        show = c.fetchone()
+        if show == None:
             update_database_latest()
+        else:
+            shows_latest.append(show)
         conn.commit()
         conn.close()
     latest_shows = []
